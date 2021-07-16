@@ -1,0 +1,43 @@
+@mixin cardTheme($theme: DarkGray) {
+  background: $theme;
+  border: 1px solid $theme;
+  width: 120px;
+  height: 120px;
+  border-radius: 24px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba($theme, .25);
+  color: #fff;
+}
+
+.info {
+  @include cardTheme;
+}
+.alert {
+  @include cardTheme($theme: DarkRed);
+}
+.success {
+  @include cardTheme($theme: DarkGreen);
+}
+
+.App {
+  display: flex;
+  margin: 24px auto;
+  max-width: 600px;
+  justify-content: space-between;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
